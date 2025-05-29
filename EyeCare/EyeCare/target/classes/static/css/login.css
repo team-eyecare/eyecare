@@ -1,0 +1,159 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    font-family: 'Segoe UI', 'Pretendard', sans-serif;
+}
+
+.banner {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.logo-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.logo-link:hover {
+    color: #2980b9;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 2.5rem 3rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #3498db;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #34495e;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #2c3e50;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+.login-btn:hover {
+    background-color: #2980b9;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.social-login {
+    margin-top: 2rem;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: #7f8c8d;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.divider span {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+}
+
+.social-btn {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.google-btn {
+    background-color: #ffffff;
+    color: #757575;
+    border: 1px solid #e0e0e0;
+}
+
+.google-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.naver-btn {
+    background-color: #03C75A;
+    color: #ffffff;
+}
+
+.naver-btn:hover {
+    background-color: #02b351;
+}
+
+.social-btn i {
+    font-size: 1.2rem;
+}
