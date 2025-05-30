@@ -36,8 +36,9 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.EyeCareApplication.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "leeyw",
     "last_opened_file_path": "C:/Users/leeyw/Desktop/eyecare/EyeCare",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -49,6 +50,11 @@
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -85,6 +91,8 @@
       <updated>1748521356091</updated>
       <workItem from="1748521357174" duration="8298000" />
       <workItem from="1748531127240" duration="2010000" />
+      <workItem from="1748535212346" duration="1783000" />
+      <workItem from="1748595987547" duration="4093000" />
     </task>
     <servers />
   </component>

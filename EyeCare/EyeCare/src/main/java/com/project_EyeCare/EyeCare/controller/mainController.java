@@ -18,10 +18,6 @@ public class mainController {
         return "/hospital.html";
     }
 
-    //상품페이지
-    @GetMapping("/products")
-    public String product(){
-        return "/product/products.html";
-    }
+
 
 }
