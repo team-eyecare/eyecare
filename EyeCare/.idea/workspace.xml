@@ -10,10 +10,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -39,6 +43,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.EyeCareApplication.executor": "Run",
     "git-widget-placeholder": "leeyw",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/leeyw/Desktop/eyecare/EyeCare",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -48,7 +53,7 @@
     "project.structure.last.edited": "프로젝트",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "project.propCompiler",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -82,6 +87,9 @@
       </set>
     </attachedChunks>
   </component>
+  <component name="StructureViewState">
+    <option name="selectedTab" value="논리" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
       <changelist id="842031f9-3f18-4eeb-8453-4bf6c0e22882" name="변경" comment="" />
@@ -92,11 +100,18 @@
       <workItem from="1748521357174" duration="8298000" />
       <workItem from="1748531127240" duration="2010000" />
       <workItem from="1748535212346" duration="1783000" />
-      <workItem from="1748595987547" duration="4093000" />
+      <workItem from="1748595987547" duration="16992000" />
+      <workItem from="1748949583034" duration="2142000" />
+      <workItem from="1748962762499" duration="2482000" />
+      <workItem from="1748965274154" duration="13149000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
