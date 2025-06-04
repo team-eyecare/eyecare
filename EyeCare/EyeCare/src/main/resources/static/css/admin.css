@@ -1,0 +1,112 @@
+:root {
+    --admin-bg: #f8f9fa;
+    --admin-main: #ffffff;
+    --admin-point: #3498db;
+    --admin-point-dark: #2980b9;
+    --admin-gray: #e3e9f4;
+    --admin-txt: #2c3e50;
+}
+
+body {
+    background: var(--admin-bg);
+    font-family: 'Segoe UI', 'Pretendard', 'Apple SD Gothic Neo', Arial, sans-serif;
+    margin: 0;
+    color: var(--admin-txt);
+}
+
+.admin-header {
+    background: var(--admin-main);
+    color: var(--admin-point);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--admin-point);
+}
+
+.admin-nav-link {
+    color: var(--admin-point);
+    text-decoration: none;
+    font-size: 1.07rem;
+    margin-left: 30px;
+    transition: color 0.2s, border-bottom 0.2s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+    font-weight: 600;
+}
+.admin-nav-link.active,
+.admin-nav-link:hover {
+    color: var(--admin-point-dark);
+    border-bottom: 2px solid var(--admin-point-dark);
+}
+
+.admin-main {
+    max-width: 550px;
+    margin: 3rem auto;
+    background: var(--admin-main);
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(52, 152, 219, 0.09);
+    padding: 2.5rem 2rem 2rem 2rem;
+}
+
+.admin-section h2 {
+    color: var(--admin-point-dark);
+    margin-top: 0;
+    font-size: 1.35rem;
+    margin-bottom: 22px;
+}
+
+.admin-form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.admin-form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 1.03rem;
+    color: var(--admin-point-dark);
+}
+
+.admin-form-group input {
+    width: 100%;
+    border: 1.5px solid var(--admin-gray);
+    background: #f4f9fd;
+    border-radius: 8px;
+    padding: 13px 18px; /* 오른쪽과 왼쪽 여백을 18px로 늘려줌 */
+    font-size: 1.12rem;
+    transition: border 0.2s;
+    outline: none;
+    color: var(--admin-txt);
+    box-sizing: border-box;   /* 패딩이 너비에 포함되도록 처리 */
+}
+.admin-form-group input:focus {
+    border: 1.5px solid var(--admin-point-dark);
+    background: #fff;
+}
+
+.admin-btn {
+    width: 100%;
+    padding: 1rem 0;
+    background: var(--admin-point);
+    color: #fff;
+    font-size: 1.09rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 2px 10px 0 rgba(52,152,219,0.08);
+    margin-top: 6px;
+}
+
+.admin-btn:hover {
+    background: var(--admin-point-dark);
+}
