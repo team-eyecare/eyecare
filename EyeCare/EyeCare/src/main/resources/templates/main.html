@@ -14,10 +14,11 @@
 
         .main-section {
             background-image: url('https://images.unsplash.com/photo-1629762683838-bd28a48c39a3?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            background-size: cover;
+            background-size: 80%;         /* 배경 비율 축소 */
+            background-repeat: no-repeat;
             background-position: center;
             padding: 50px 0;
-            min-height: 100vh;
+            min-height: 70vh;             /* 높이도 줄이면 더 작게 보임 */
             color: white;
         }
 
@@ -85,20 +86,11 @@
 </header>
 
 <div class="main-section">
-    <!-- 병원 찾기 챗봇 UI -->
-    <div class="hospital-section" style="display: flex; justify-content: center; align-items: center; margin-top: 4rem;">
-        <div id="chatbox-container" style="display: none; flex-direction: column; align-items: flex-start;">
-            <div id="chatbox" style="width: 400px; background: white; padding: 15px; border-radius: 10px; height: 300px; overflow-y: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1);"></div>
-            <div style="display: flex; margin-top: 10px;">
-                <label for="chat-input"></label><input type="text" id="chat-input" placeholder="메시지를 입력하세요" style="flex: 1; padding: 10px; font-size: 16px;">
-                <button onclick="sendMessage()" style="padding: 10px 20px;">전송</button>
-            </div>
+    <div class="hospital-section">
+        <div class="hospital-content">
+            <button onclick="location.href='hospital.html'">병원 찾기</button>
         </div>
-
-        <button onclick="toggleChatbox()" style="margin-left: 30px;">병원 찾기</button>
     </div>
-
-
     <div class="glasses-section">
         <!-- 굳이 안에 콘텐츠 없으면 이대로 비워도 됨 -->
     </div>
