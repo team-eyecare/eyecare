@@ -226,6 +226,7 @@ header {
     background-color: #2980b9;
 }
 
+<<<<<<< HEAD
 
  body {
      margin: 0;
@@ -235,10 +236,19 @@ header {
 .main-section {
     /*background-image: url("https://img.freepik.com/free-vector/ophthalmology-background-with-doctor-ophthalmologist-check-vision-with-eye-test-chart-vector-hand-drawn-illustration-man-optometrist-glasses-drops-machines-eyesight-medical-exam_107791-11406.jpg?ga=GA1.1.133242417.1749731485&semt=ais_hybrid&w=740");*/
     background-size: 100%;         /* 배경 비율 축소 */
+=======
+.main-section {
+    background-image: url('https://images.unsplash.com/photo-1629762683838-bd28a48c39a3?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: 80%;         /* 배경 비율 축소 */
+>>>>>>> origin/leed
     background-repeat: no-repeat;
     background-position: center;
     padding: 50px 0;
     min-height: 70vh;             /* 높이도 줄이면 더 작게 보임 */
     color: white;
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> origin/leed
