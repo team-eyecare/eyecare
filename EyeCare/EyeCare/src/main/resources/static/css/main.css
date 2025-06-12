@@ -221,3 +221,13 @@ header {
 #more-button:hover {
     background-color: #2980b9;
 }
+
+.main-section {
+    background-image: url('https://images.unsplash.com/photo-1629762683838-bd28a48c39a3?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: 80%;         /* 배경 비율 축소 */
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px 0;
+    min-height: 70vh;             /* 높이도 줄이면 더 작게 보임 */
+    color: white;
+}

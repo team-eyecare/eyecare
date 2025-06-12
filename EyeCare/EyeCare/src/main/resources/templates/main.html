@@ -5,74 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EyeCare</title>
     <link rel="stylesheet" href="../static/css/main.css">
-
-    <style>
-        body {
-            margin: 0;
-            background-color: black;
-        }
-
-        .main-section {
-            background-image: url('https://images.unsplash.com/photo-1629762683838-bd28a48c39a3?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            background-size: 80%;         /* 배경 비율 축소 */
-            background-repeat: no-repeat;
-            background-position: center;
-            padding: 50px 0;
-            min-height: 70vh;             /* 높이도 줄이면 더 작게 보임 */
-            color: white;
-        }
-
-        .products-section {
-            background-color: rgba(0, 0, 0, 0.8); /* 내용 가독성 위해 어두운 배경 */
-            padding: 40px;
-            color: white;
-        }
-
-        .product-wrapper {
-            margin-bottom: 20px;
-        }
-
-        .product {
-            width: 100%;
-            height: 150px;
-            background-color: white;
-            border-radius: 8px;
-        }
-
-        .product-info {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .header-btn {
-            background-color: #4fc3f7;
-            border: none;
-            border-radius: 6px;
-            padding: 0.5rem 1rem;
-            margin-left: 8px;
-            color: black;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .logo-link {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background-color: rgba(0, 0, 0, 0.7);
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
-    </style>
 </head>
 <body>
 <header>
@@ -140,49 +72,5 @@
         <button id="more-button" onclick="location.href='product/products.html'">상품 더보기</button>
     </div>
 </div>
-
-<script>
-    function toggleChatbox() {
-        const chat = document.getElementById('chatbox-container');
-        chat.style.display = (chat.style.display === 'none') ? 'flex' : 'none';
-    }
-
-    function addMessage(text, type) {
-        const wrapper = document.createElement('div');
-        wrapper.className = type;
-
-        const msg = document.createElement('div');
-        msg.className = 'msg';
-        msg.innerText = text;
-
-        wrapper.appendChild(msg);
-        document.getElementById('chatbox').appendChild(wrapper);
-        document.getElementById('chatbox').scrollTop = document.getElementById('chatbox').scrollHeight;
-    }
-
-    async function sendMessage() {
-        const input = document.getElementById('chat-input');
-        const message = input.value.trim();
-        if (!message) return;
-
-        addMessage(message, 'user');
-        input.value = '';
-
-        try {
-            const response = await fetch('http://localhost:3000/api/chat', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message })
-            });
-
-            const data = await response.json();
-            addMessage(data.reply, 'bot');
-        } catch (error) {
-            addMessage('서버와 통신에 문제가 발생했습니다.', 'bot');
-        }
-    }
-</script>
-
-
 </body>
 </html>
