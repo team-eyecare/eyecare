@@ -42,9 +42,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.EyeCareApplication.executor": "Run",
-    "git-widget-placeholder": "leeyw",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/leeyw/Desktop/eyecare/EyeCare",
+    "last_opened_file_path": "C:/Users/leeyw/Desktop/project/EyeCare",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -53,7 +53,7 @@
     "project.structure.last.edited": "프로젝트",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propCompiler",
+    "settings.editor.selected.configurable": "kotlinNotebook",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -104,6 +104,7 @@
       <workItem from="1748949583034" duration="2142000" />
       <workItem from="1748962762499" duration="2482000" />
       <workItem from="1748965274154" duration="13149000" />
+      <workItem from="1749736648243" duration="1193000" />
     </task>
     <servers />
   </component>

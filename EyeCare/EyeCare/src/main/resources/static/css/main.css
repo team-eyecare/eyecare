@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Segoe UI', 'Pretendard', sans-serif;
-    background-color: #f8f9fa;
-    color: #2c3e50;
+    background-color: #fff;   /* 전체 배경 흰색 */
+    color: #111;              /* 본문 텍스트 진한 검정 */
     overflow-x: hidden;
 }
 
@@ -18,22 +18,23 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #ffffff;
+    background-color: #fff;      /* 헤더도 흰색 */
     font-size: 1.5rem;
     font-weight: bold;
-    color: #3498db;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #111;                 /* 헤더 글씨 검정 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+/* 로고 심플하게 */
 .logo-link {
-    color: #3498db;
+    color: #111;                /* 검정 */
     text-decoration: none;
     font-weight: bold;
     font-size: 1.5rem;
+    transition: color 0.2s;
 }
-
 .logo-link:hover {
-    color: #2980b9;
+    color: #000;
 }
 
 .header-buttons {
@@ -41,19 +42,20 @@ header {
     gap: 0.8rem;
 }
 
+/* 헤더 버튼 - 검정 배경, 흰색 글씨 */
 .header-btn {
     padding: 0.5rem 1rem;
-    background-color: #3498db;
-    color: #ffffff;
+    background-color: #111;
+    color: #fff;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.22s;
+    font-weight: 500;
 }
-
 .header-btn:hover {
-    background-color: #2980b9;
+    background-color: #000;
 }
 
 /* 메인 병원/안경 섹션 */
@@ -106,29 +108,31 @@ header {
 .hospital-section button {
     z-index: 1;
     padding: 0.8rem 1.5rem;
-    background-color: #3498db;
-    color: #ffffff;
+    background-color: #111;
+    color: #fff;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.22s;
+    font-weight: 500;
 }
 .hospital-section button:hover {
-    background-color: #2980b9;
+    background-color: #000;
 }
 
 /* 상품 섹션 */
 .products-section {
-    background-color: #f8f9fa;
+    background-color: #fff;   /* 배경 흰색 */
     padding: 2rem;
 }
 
+/* 타이틀 - 검정 */
 .products-title {
     font-size: 1.5rem;
     text-align: center;
     margin-bottom: 2rem;
-    color: #3498db;
+    color: #111;
     font-weight: 600;
 }
 
@@ -221,3 +225,20 @@ header {
 #more-button:hover {
     background-color: #2980b9;
 }
+
+
+ body {
+     margin: 0;
+     background-color: black;
+ }
+
+.main-section {
+    /*background-image: url("https://img.freepik.com/free-vector/ophthalmology-background-with-doctor-ophthalmologist-check-vision-with-eye-test-chart-vector-hand-drawn-illustration-man-optometrist-glasses-drops-machines-eyesight-medical-exam_107791-11406.jpg?ga=GA1.1.133242417.1749731485&semt=ais_hybrid&w=740");*/
+    background-size: 100%;         /* 배경 비율 축소 */
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px 0;
+    min-height: 70vh;             /* 높이도 줄이면 더 작게 보임 */
+    color: white;
+}
+

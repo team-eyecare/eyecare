@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8" />
     <title>전체 상품</title>
-    <link rel="stylesheet" href="../../static/css/main.css">
+    <link rel="stylesheet" href="/css/products.css">
 </head>
 <body>
 <header>
     <div>
-        <a href="../main.html" class="logo-link">EyeCare</a>
+        <a onclick="location.href='/index'" class="logo-link">EyeCare</a>
     </div>
     <div class="header-buttons">
-        <button class="header-btn" onclick="location.href='../account/login.html'">로그인</button>
-        <button class="header-btn" onclick="location.href='../account/register.html'">회원가입</button>
+        <button class="header-btn" onclick="location.href='login'">로그인</button>
+        <button class="header-btn" onclick="location.href='register'">회원가입</button>
     </div>
 </header>
 
@@ -21,14 +21,22 @@
     <div class="product-list">
     <th:block th:each="prod : ${products}">
         <div class="product-wrapper">
-            <div class="product"></div>
+            <div class="product"
+                 style="cursor:pointer;"
+                 th:onclick="|location.href='@{/products/{id}(id=${prod.product_id})}'|">
+                <!-- 상품 이미지 추가 -->
+                <div class="product-img">
+                    <img th:src="@{/image/glasses1.jpg}" alt="상품 이미지" />
+                </div>
+            </div>
             <div class="product-info">
-                <span th:text="${prod.name}">상품명</span><br>
-                <span th:text="${prod.price}">가격</span>
+                <a th:href="@{/products/{id}(id=${prod.product_id})}" th:text="${prod.name}"
+                   style="cursor:pointer; color:inherit; text-decoration:underline;">상품명</a><br>
+                <span th:text="'₩ '+ ${prod.price}">가격</span>
             </div>
         </div>
     </th:block>
-</div>
+    </div>
 </div>
 </body>
 </html>

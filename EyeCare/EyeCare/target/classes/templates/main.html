@@ -4,91 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EyeCare</title>
-    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 
-    <style>
-        body {
-            margin: 0;
-            background-color: black;
-        }
-
-        .main-section {
-            background-image: url('https://images.unsplash.com/photo-1629762683838-bd28a48c39a3?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            background-size: 80%;         /* 배경 비율 축소 */
-            background-repeat: no-repeat;
-            background-position: center;
-            padding: 50px 0;
-            min-height: 70vh;             /* 높이도 줄이면 더 작게 보임 */
-            color: white;
-        }
-
-        .products-section {
-            background-color: rgba(0, 0, 0, 0.8); /* 내용 가독성 위해 어두운 배경 */
-            padding: 40px;
-            color: white;
-        }
-
-        .product-wrapper {
-            margin-bottom: 20px;
-        }
-
-        .product {
-            width: 100%;
-            height: 150px;
-            background-color: white;
-            border-radius: 8px;
-        }
-
-        .product-info {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .header-btn {
-            background-color: #4fc3f7;
-            border: none;
-            border-radius: 6px;
-            padding: 0.5rem 1rem;
-            margin-left: 8px;
-            color: black;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .logo-link {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background-color: rgba(0, 0, 0, 0.7);
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
-    </style>
 </head>
 <body>
 <header>
     <div>
-        <a href="main.html" class="logo-link">EyeCare</a>
+        <a onclick="location.href='/index'" class="logo-link" style="cursor:pointer;">EyeCare</a>
     </div>
     <div class="header-buttons">
-        <button class="header-btn" onclick="location.href='account/login.html'">로그인</button>
-        <button class="header-btn" onclick="location.href='account/register.html'">회원가입</button>
+        <button class="header-btn" onclick="location.href='/login'">로그인</button>
+        <button class="header-btn" onclick="location.href='/register'">회원가입</button>
     </div>
 </header>
 
 <div class="main-section">
     <div class="hospital-section">
         <div class="hospital-content">
-            <button onclick="location.href='hospital.html'">병원 찾기</button>
+            <button onclick="location.href='/hospital'">병원 찾기</button>
         </div>
     </div>
     <div class="glasses-section">
@@ -98,46 +31,38 @@
 
 <div class="products-section">
     <div class="products-title">상품</div>
+    <!-- 첫 번째 줄 4개 -->
     <div class="product-list">
-        <!-- 첫 줄 4개 -->
-        <div class="product-wrapper">
-            <div class="product"></div>
-            <div class="product-info">상품명<br>상품 가격</div>
-        </div>
-        <div class="product-wrapper">
-            <div class="product"></div>
-            <div class="product-info">상품명<br>상품 가격</div>
-        </div>
-        <div class="product-wrapper">
-            <div class="product"></div>
-            <div class="product-info">상품명<br>상품 가격</div>
-        </div>
-        <div class="product-wrapper">
-            <div class="product"></div>
-            <div class="product-info">상품명<br>상품 가격</div>
-        </div>
+        <th:block th:each="product, idx : ${products}">
+            <th:block th:if="${idx.index &lt; 4}">
+                <div class="product-wrapper">
+                    <div class="product"></div>
+                    <div class="product-info">
+                        <span th:text="${product.name}">상품명</span><br>
+                        <span th:text="'₩ '+ ${#numbers.formatInteger(product.price, 0, 'COMMA')}">가격</span>
+                    </div>
+                </div>
+            </th:block>
+        </th:block>
     </div>
+    <!-- 두 번째 줄 4개 -->
     <div class="product-list">
-        <!-- 두 번째 줄 4개 -->
-        <div class="product-wrapper">
-            <div class="product"></div>
-            <div class="product-info">상품명<br>상품 가격</div>
-        </div>
-        <div class="product-wrapper">
-            <div class="product"></div>
-            <div class="product-info">상품명<br>상품 가격</div>
-        </div>
-        <div class="product-wrapper">
-            <div class="product"></div>
-            <div class="product-info">상품명<br>상품 가격</div>
-        </div>
-        <div class="product-wrapper">
-            <div class="product"></div>
-            <div class="product-info">상품명<br>상품 가격</div>
-        </div>
+        <th:block th:each="product, idx : ${products}">
+            <th:block th:if="${idx.index &gt;= 4}">
+                <div class="product-wrapper">
+                    <div class="product"></div>
+                    <div class="product-info">
+                        <span th:text="${product.name}">상품명</span><br>
+                        <span th:text="'₩ '+ ${#numbers.formatInteger(product.price, 0, 'COMMA')}">가격</span>
+                    </div>
+                </div>
+            </th:block>
+        </th:block>
     </div>
+
+
     <div class="more-button-wrapper">
-        <button id="more-button" onclick="location.href='product/products.html'">상품 더보기</button>
+        <button id="more-button" onclick="location.href='/products'">상품 더보기</button>
     </div>
 </div>
 
