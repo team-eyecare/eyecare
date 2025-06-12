@@ -80,6 +80,9 @@ header {
     background-size: cover;
     background-position: center;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .glasses-section {
@@ -88,14 +91,6 @@ header {
     background-size: cover;
     background-position: center;
     position: relative;
-}
-
-/* hover 시 병원 영역 확대 */
-.hospital-section:hover {
-    flex: 3;
-}
-.hospital-section:hover + .glasses-section {
-    flex: 1;
 }
 
 /* 배경 이미지 설정 */
@@ -211,7 +206,6 @@ header {
 .more-button-wrapper {
     text-align: center;
     margin-top: 1.5rem;
-    margin-bottom: 2rem;
 }
 
 #more-button {
