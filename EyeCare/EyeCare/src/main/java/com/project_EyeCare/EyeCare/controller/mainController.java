@@ -1,13 +1,14 @@
 package com.project_EyeCare.EyeCare.controller;
 
-import com.project_EyeCare.EyeCare.Repository.ItemRepository;
 import com.project_EyeCare.EyeCare.Repository.PdRepository;
 import com.project_EyeCare.EyeCare.entity.PD;
-import com.project_EyeCare.EyeCare.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.data.domain.PageRequest; // 추가
+import org.springframework.data.domain.Pageable;    // 추가
 
 import java.util.List;
 
@@ -23,9 +24,10 @@ public class mainController {
 
     //메인페이지
     @GetMapping("/index")
-    public String maindPd(Model model) {
-        List<PD> samplePd = pdRepository.findAll();
-
+    public String mainPd(Model model) {
+        // 0~7 (8개) 상품만 조회
+        Pageable pageable = PageRequest.of(0, 8);
+        List<PD> samplePd = pdRepository.findAll(pageable).getContent();
         model.addAttribute("products", samplePd);
         return "/main";
     }
@@ -35,7 +37,4 @@ public class mainController {
     public String hospital() {
         return "/hospital";
     }
-
-
-
 }
