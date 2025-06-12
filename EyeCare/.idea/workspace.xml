@@ -24,6 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "YoungWoong22"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/team-eyecare/eyecare.git",
+    "accountId": "56d65865-5ab7-4b7e-9613-3dd04d85d0a8"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -104,7 +116,7 @@
       <workItem from="1748949583034" duration="2142000" />
       <workItem from="1748962762499" duration="2482000" />
       <workItem from="1748965274154" duration="13149000" />
-      <workItem from="1749736648243" duration="2624000" />
+      <workItem from="1749736648243" duration="3078000" />
     </task>
     <servers />
   </component>
